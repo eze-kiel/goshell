@@ -11,6 +11,7 @@ USAGE:
 COMMANDS:
    bash     Generate a Bash reverse shell
    nc       Generate NetCat reverse shells
+   perl     Generate a Perl reverse shell
    php      Generate a PHP reverse shell
    py       Generate a Python reverse shell
    ruby     Generate a Ruby reverse shell
