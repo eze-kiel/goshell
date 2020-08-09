@@ -85,7 +85,7 @@ func main() {
 	}
 
 	// Start message
-	fmt.Print(fmt.Sprint(Blue("GoShell - (c)2020 - ezekiel\n").Bold()))
+	fmt.Print(fmt.Sprint(Blue("GoShell - (c)2020 - Hugo Blanc (ezekiel)\n").Bold()))
 	fmt.Print(fmt.Sprint(Red("Note that those shells may not work on your target !\n\n").Bold()))
 
 	// Sort commands list in help panel by name
