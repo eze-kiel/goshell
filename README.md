@@ -13,8 +13,9 @@ COMMANDS:
    nc       Generate NetCat reverse shells
    perl     Generate a Perl reverse shell
    php      Generate a PHP reverse shell
-   py       Generate a Python reverse shell
+   python   Generate a Python reverse shell
    ruby     Generate a Ruby reverse shell
+   telnet   Generate telnet reverse shells
    help, h  Shows a list of commands or help for one command
 
 COMMAND OPTIONS:

